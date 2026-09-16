@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management System</title>
+
+    <!-- Google Fonts for modern and simple look -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css?v=3" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Bootstrap (for grid & utility classes) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <img src="images/logo.png" alt="Logo" />
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#service">Service</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          
+          <!-- Mobile Login Options -->
+          <div class="mobile-login-options">
+            <a href="login_user.php" class="mobile-login-link">
+              <i class="fas fa-user"></i> User Login
+            </a>
+            <a href="login_doctor.php" class="mobile-login-link">
+              <i class="fas fa-user-md"></i> Doctor Login
+            </a>
+            <a href="login_admin.php" class="mobile-login-link">
+              <i class="fas fa-user-shield"></i> Admin Login
+            </a>
+          </div>
+        </div>
+
+        <div class="login-dropdown desktop-only">
+          <button class="login-dropdown-btn" onclick="toggleLoginDropdown()">
+            <i class="fas fa-sign-in-alt"></i> Login
+            <i
+              class="fas fa-chevron-down"
+              style="font-size: 12px; margin-left: 5px"
+            ></i>
+          </button>
+          <div class="login-dropdown-content" id="loginDropdown">
+            <a href="login_user.php" class="login-option">
+              <div class="login-option-icon user">
+                <i class="fas fa-user"></i>
+              </div>
+              <span class="login-option-text"> User Login</span>
+            </a>
+            <a href="login_doctor.php" class="login-option">
+              <div class="login-option-icon doctor">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <span class="login-option-text">Doctor Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </a>
+            <a href="login_admin.php" class="login-option">
+              <div class="login-option-icon admin">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <span class="login-option-text">Admin Login</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menu Icon -->
+      <div class="icons">
+        <div id="menubar" class="fas fa-bars"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="patience-section" id="home">
+      <div class="text-box">
+        <h1>
+          Provide an exceptional <br />
+          patient experience
+        </h1>
+        <p>
+          We combine modern technology and compassionate care to make every
+          patient feel safe and supported, from the first appointment to
+          follow-up care.
+        </p>
+      </div>
+
+      <div class="image-box"></div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="left-about">
+        <h1>About Us</h1>
+        <p>
+          We provide the best medical care with modern technology and expert
+          doctors. Our goal is to make every patient feel safe and cared for.
+        </p>
+        <p>
+          From emergency services to routine checkups, our dedicated team works
+          24/7 to ensure timely diagnosis, personalized treatment plans, and a
+          friendly environment for patients and their families.
+        </p>
+        <a href="aboutus.html" class="btn">Read More</a>
+      </div>
+
+      <div class="right-about">
+        <img src="images/chiness.jpg" alt="About our hospital" />
+      </div>
+    </section>
+
+    <!-- special Services -->
+    <section class="services py-5 h-100" id="service">
+      <div class="container text-center h-100 w-100">
+        <h1 class="mb-3">Our Special Services</h1>
+        <p class="mb-5">
+          We provide quality healthcare with modern facilities, same-day
+          appointments, and dedicated support to guide you through every step of
+          your treatment.
+        </p>
+
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-96 text-center shadow rounded-4 p-3">
+              <i class="fas fa-notes-medical fa-3x mb-3 text-primary"></i>
+              <div class="card-body">
+                <h5 class="card-title">Health Checkup</h5>
+                <p class="card-text">
+                  Regular checkups to ensure your good health.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-96 text-center shadow rounded-4 p-3">
+              <i class="fas fa-hospital-user fa-3x mb-3 text-primary"></i>
+              <div class="card-body">
+                <h5 class="card-title">Patient Support</h5>
+                <p class="card-text">
+                  Friendly staff to assist you during your visit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-96 text-center shadow rounded-4 p-3">
+              <i class="fas fa-user-md fa-3x mb-3 text-primary"></i>
+              <div class="card-body">
+                <h5 class="card-title">Expert Doctors</h5>
+                <p class="card-text">
+                  Qualified doctors offering the best medical care.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section  -->
+    <section class="gallery" id="gallery">
+      <h1>Gallery</h1>
+
+      <div class="gallery-container">
+        <img src="images/gal1.jpg" alt="Hospital gallery 1" />
+        <img src="images/gal2.jpg" alt="Hospital gallery 2" />
+        <img src="images/gal3.jpg" alt="Hospital gallery 3" />
+        <img src="images/gal4.jpg" alt="Hospital gallery 4" />
+        <img src="images/gal5.jpg" alt="Hospital gallery 5" />
+        <img src="images/gal6.jpg" alt="Hospital gallery 6" />
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-us flex">
+      <div class="choose-image">
+        <img src="images/cute.jpg" alt="Hospital Image" />
+      </div>
+
+      <div class="choose-text">
+        <h1>Why Choose Us</h1>
+
+        <div class="choose-item">
+          <i class="fas fa-notes-medical"></i>
+          <p>Top-quality healthcare with modern facilities.</p>
+        </div>
+
+        <div class="choose-item">
+          <i class="fas fa-hospital-user"></i>
+          <p>Friendly staff ready to assist every patient.</p>
+        </div>
+
+        <div class="choose-item">
+          <i class="fas fa-user-md"></i>
+          <p>Experienced doctors providing the best care.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR DOCTORS -->
+    <section class="doctors" id="contact">
+      <h1 style="text-align: center; margin-bottom: 4rem">Our Doctors</h1>
+      <div class="doctor-list flex">
+        <div class="doctor">
+          <img src="images/gal3.jpg" alt="Doctor" />
+          <a href="https://facebook.com" target="_blank"> 
+          <div class="doctor-icons">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="doctor">
+          <img src="images/gal2.jpg" alt="Doctor" />
+          <div class="doctor-icons">
+            <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="doctor">
+          <img src="images/gal5.jpg" alt="Doctor" />
+          <div class="doctor-icons">
+            <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h2>CarePoint Hospital</h2>
+          <p>
+            Caring for you with modern facilities
+            <br />
+            and expert medical teams every day.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#service">Service</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="login_user.php">Login</a>
+          <a href="signup.php">Sign Up</a>
+          <a href="login_user.php?next=appointment">Book Appointment</a>
+        </div>
+
+        <div class="footer-contact">
+          <p>
+            <i class="fas fa-phone"></i>
+            +977-9800000000
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            info@carepoint.com
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Gaindakot, Nepal
+          </p>
+        </div>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 CarePoint Hospital. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
